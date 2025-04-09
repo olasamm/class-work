@@ -6,8 +6,8 @@ const Signup = () => {
    const [password, setPassword] = useState("")
 
    const getInfo = () => {
-     const allValue = {name, mail, password}
-     localStorage.setItem("user", JSON.stringify(allValue))
+    //  const allValue = {name, mail, password}
+     const user = JSON.parse( localStorage.getItem('user'))
      if (user && mail && password && name) {
        alert("Signup Successfully")
      } else {
